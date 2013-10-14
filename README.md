@@ -1,50 +1,40 @@
-# TJStamp
+TJStamp
+=======
 
-![knew](http://i.imgur.com/J8OVxep.png)
-![wang](http://i.imgur.com/fh5yFaA.png)
+<table>
+  <tr>
+    <td><img src="http://i.imgur.com/J8OVxep.png" alt="朕知道了"></td>
+    <td><img src="http://i.imgur.com/fh5yFaA.png" alt="王小明"></td>
+    <td><img src="http://i.imgur.com/mvqALym.png" alt="愉悅"></td>
+    <td><img src="http://i.imgur.com/t0HGJZK.png" alt="爽"></td>
+  </tr>
+</table>
 
-## Example
+Installation
+------------
 
+    > gem install tjstamp
+
+Example
+-------
+
+    # Basic Usage
     require 'tjstamp'
     tjs = TJStamp.new(name: '朕知道了', background_color: 'white')
-    image = tjs.stamp
-    image.write '/tmp/knew.png'
+    image = tjs.stamp # => Magick::Image
+    image.display
 
-    tjs.update name: '王小明'
+    # Write to file
+    tjs.update name: '王小明', size: 512
     tjs.stamp.write '/tmp/wang.png'
 
-## Options
+Options
+-------
 
-* `name:string`
-
-  1 to 4 length string
-
-  default: `"王小明"`
-
-* `size:string`
-
-  default: `256`
-
-* `corner_size:integer`
-
-  default: `10`
-
-* `stroke_width:integer`
-
-  default: `20`
-
-* `font:string`
-
-  Path to font file
-
-  default: `"simsun.ttf"`
-
-* `color:string`
-
-  http://studio.imagemagick.org/RMagick/doc/imusage.html#color_names
-
-  default: `"red"`
-
-* `background_color:string`
-
-  default: `"none"`
+* `name`: Default: `"王小明"`
+* `size:` Default: `256`
+* `corner_size`: Default: `10`
+* `stroke_width`: Default: `20`
+* `font`: Path to font file, Default: `"simsun.ttf"`
+* `color`: [Check here](http://studio.imagemagick.org/RMagick/doc/imusage.html#color_names) for more information. Default: `"red"`
+* `background_color`: Default: `"none"`
