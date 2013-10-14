@@ -1,5 +1,8 @@
 # TJStamp
 
+![wang](http://i.imgur.com/fh5yFaA.png)
+![knew](http://i.imgur.com/J8OVxep.png)
+
 ## Options
 
 * `name:string`
@@ -42,6 +45,6 @@
     tjs = TJStamp.new(name: '朕知道了', background_color: 'white')
     image = tjs.stamp
     image.write '/tmp/knew.png'
-    
+
     tjs.update name: '王小明'
     tjs.stamp.write '/tmp/wang.png'
