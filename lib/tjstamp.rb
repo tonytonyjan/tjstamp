@@ -15,6 +15,7 @@ class TJStamp
 
   def update **params
     params.each{ |key, value| send("#{key}=", value)}
+    self
   end
 
   def stamp
