@@ -82,6 +82,7 @@ class TJStamp
       raise 'Missing gravity'
     end
 
-    img.composite!(char_image.resize(w, h), gravity, x, y, Magick::OverCompositeOp)
+    img.composite!(char_image.resize!(w, h), gravity, x, y, Magick::OverCompositeOp)
+    char_image.destroy!
   end
 end
