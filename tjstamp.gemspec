@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'tjstamp'
-  s.version     = '1.0.1'
+  s.version     = '1.0.2'
   s.date        = '2013-10-14'
   s.summary     = 'A tool for generating Chinese charater stamp image.'
   s.description = "A tool for generating Chinese charater stamp image."
